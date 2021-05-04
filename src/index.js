@@ -14,7 +14,7 @@ allClear() {
 
 appendNumber(number) {
     if(number === '.' && this.currentDisplay.includes('.')) return
-    if(this.currentDisplay.length > 11) {
+    if(this.currentDisplay.length === 13) {
         return
     } else {
         this.currentDisplay = this.currentDisplay.toString() + number.toString();
@@ -59,7 +59,7 @@ evaluate() {
             break;
     }
     if(evaluation.toString().length > 10) {
-        this.currentDisplay = evaluation.toPrecision(9);
+        this.currentDisplay = evaluation.toPrecision(10);
     } else {
         this.currentDisplay = evaluation;
     }
